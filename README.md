@@ -1,3 +1,21 @@
+run from command line or declare in POM as
+
+    mvn io.github.madamovych:maven-utilities-maven-plugin:x.x.x:versions-override
+
+    <plugin>
+        <groupId>io.github.madamovych</groupId>
+        <artifactId>maven-utilities-maven-plugin</artifactId>
+        <version>x.x.x</version>
+        <executions>
+            <execution>
+                <id>versions-override</id>
+                <goals>
+                    <goal>versions-override</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+
 # versions-override  
 defaultPhase=VALIDATE
 
@@ -10,20 +28,23 @@ Analyze Maven project tree and answer the question how do versions change from t
  
 example output
 
-    [INFO] D org.springframework:spring-core [compile] 5.3.19 > - > 5.3.10 > -
-    [INFO] D org.springframework:spring-test [provided] 5.3.19 > - > 5.3.10 > -
-    [INFO] D org.springframework:spring-web [provided] 5.3.19 > - > 5.3.10 > -
- 
+    D org.junit.jupiter:junit-jupiter-api [provided] 5.8.2 > - > 5.8.1 > -
+    D org.junit.jupiter:junit-jupiter [provided] 5.8.2 > - > 5.8.1 > -
+    - org.mvel:mvel2 [provided] . > . > 2.4.4.Final > -
+    D org.springframework:spring-core [compile] 5.3.19 > - > 5.3.10 > -
+    D org.springframework:spring-test [provided] 5.3.19 > - > 5.3.10 > -
+    D org.springframework:spring-web [provided] 5.3.19 > - > 5.3.10 > -
+    U org.yaml:snakeyaml [compile] 1.29 > - > 2.2 > - 
 parameters  
 
     declarationOrder - define to list dependencies in declaration order, alphabetically by default
     scope - comma separated list of scopes to filter, no filtering by default
- 
+
 example commands  
 
     # quick run for current project
-    mvn com.github.madamovych:maven-utilities-maven-plugin:1.0.0:versions-override
-    # generate for all sub-projects if agregator project contains plugin declaration with execution 
+    mvn io.github.madamovych:maven-utilities-maven-plugin:x.x.x:versions-override
+    # generate for all sub-projects if agregator project contains plugin declaration 
     mvn validate
     # run for current project using plugin preffix if pluginGroup specified in maven settings.xml
     mvn maven-utilities:versions-override

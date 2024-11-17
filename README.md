@@ -28,13 +28,14 @@ Analyze Maven project tree and answer the question how do versions change from t
  
 example output
 
-    D org.junit.jupiter:junit-jupiter-api [provided] 5.8.2 > - > 5.8.1 > -
-    D org.junit.jupiter:junit-jupiter [provided] 5.8.2 > - > 5.8.1 > -
-    - org.mvel:mvel2 [provided] . > . > 2.4.4.Final > -
-    D org.springframework:spring-core [compile] 5.3.19 > - > 5.3.10 > -
-    D org.springframework:spring-test [provided] 5.3.19 > - > 5.3.10 > -
-    D org.springframework:spring-web [provided] 5.3.19 > - > 5.3.10 > -
-    U org.yaml:snakeyaml [compile] 1.29 > - > 2.2 > - 
+    D org.junit.jupiter:junit-jupiter-api:jar 5.8.2 > - > 5.8.1 > -
+    D org.junit.jupiter:junit-jupiter:jar 5.8.2 > - > 5.8.1 > -
+    - org.mvel:mvel2:jar . > . > 2.4.4.Final > -
+    D org.springframework:spring-core:jar 5.3.19 > - > 5.3.10 > -
+    D org.springframework:spring-test:jar 5.3.19 > - > 5.3.10 > -
+    D org.springframework:spring-web:jar 5.3.19 > - > 5.3.10 > -
+    U org.yaml:snakeyaml:jar 1.29 > - > 2.2 > -
+    
 parameters  
 
     declarationOrder - define to list dependencies in declaration order, alphabetically by default

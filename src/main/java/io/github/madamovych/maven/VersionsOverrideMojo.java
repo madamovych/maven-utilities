@@ -36,9 +36,9 @@ import io.github.madamovych.maven.util.AlphanumComparator;
  * example output
  * 
  * <pre>
- * [INFO] D org.springframework:spring-core [compile] 5.3.19 > - > 5.3.10 > -
- * [INFO] D org.springframework:spring-test [provided] 5.3.19 > - > 5.3.10 > -
- * [INFO] D org.springframework:spring-web [provided] 5.3.19 > - > 5.3.10 > -
+ * [INFO] D org.springframework:spring-core.jar 5.3.19 > - > 5.3.10 > -
+ * [INFO] D org.springframework:spring-test.jar 5.3.19 > - > 5.3.10 > -
+ * [INFO] D org.springframework:spring-web.jar 5.3.19 > - > 5.3.10 > -
  * </pre>
  * 
  * example commands
@@ -96,7 +96,7 @@ public class VersionsOverrideMojo extends AbstractMojo {
 						: versions.get(i).equals(versions.get(i - 1)) ? UNCHANGED : versions.get(i)));
 			}
 
-			getLog().info(format("%s %s:%s [%s] %s", state, dependency.getGroupId(), dependency.getArtifactId(), dependency.getScope(), versionsChange));
+			getLog().info(format("%s %s %s", state, dependency.getManagementKey(), versionsChange));
 		}
 	}
 

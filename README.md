@@ -1,5 +1,5 @@
 # versions-override  
-[![Maven Central Version](https://img.shields.io/maven-central/v/io.github.madamovych/maven-utilities-maven-plugin)](https://mvnrepository.com/artifact/io.github.madamovych/maven-utilities-maven-plugin)
+[![Maven Central Version](https://img.shields.io/maven-central/v/io.github.madamovych/maven-utilities-maven-plugin)](https://central.sonatype.com/artifact/io.github.madamovych/maven-utilities-maven-plugin)
 
 Analyze Maven project tree and answer the question how do versions change from top (parent POM) to bottom for dependencies  
 

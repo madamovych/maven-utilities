@@ -10,7 +10,7 @@ Analyze Maven project tree and answer the question how do versions change from t
  
 > defaultPhase=VALIDATE
 
-### example output
+### Example output
 
     D org.junit.jupiter:junit-jupiter-api:jar 5.8.2 > - > 5.8.1 > -
     D org.junit.jupiter:junit-jupiter:jar 5.8.2 > - > 5.8.1 > -
@@ -20,7 +20,7 @@ Analyze Maven project tree and answer the question how do versions change from t
     D org.springframework:spring-web:jar 5.3.19 > - > 5.3.10 > -
     U org.yaml:snakeyaml:jar 1.29 > - > 2.2 > -
 
-### run from command line or declare in POM as
+### Run from command line or declare in POM
 
     mvn io.github.madamovych:maven-utilities-maven-plugin:x.x.x:versions-override
 
@@ -38,12 +38,12 @@ Analyze Maven project tree and answer the question how do versions change from t
         </executions>
     </plugin>
 
-### parameters  
+### Parameters  
 
     declarationOrder - define to list dependencies in declaration order, alphabetically by default
     scope - comma separated list of scopes to filter, no filtering by default
 
-### example commands  
+### Examples  
 
     # quick run for current project
     mvn io.github.madamovych:maven-utilities-maven-plugin:x.x.x:versions-override

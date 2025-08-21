@@ -1,6 +1,4 @@
 # versions-override  
-> defaultPhase=VALIDATE
-
 [![Maven Central Version](https://img.shields.io/maven-central/v/io.github.madamovych/maven-utilities-maven-plugin)](https://mvnrepository.com/artifact/io.github.madamovych/maven-utilities-maven-plugin)
 
 Analyze Maven project tree and answer the question how do versions change from top (parent POM) to bottom for dependencies  
@@ -10,6 +8,8 @@ Analyze Maven project tree and answer the question how do versions change from t
     - unchanged
     . undefined
  
+> defaultPhase=VALIDATE
+
 ### example output
 
     D org.junit.jupiter:junit-jupiter-api:jar 5.8.2 > - > 5.8.1 > -
